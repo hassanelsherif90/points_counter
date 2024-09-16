@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(pointsCounter());
+  runApp(const pointsCounter());
 }
 
 class pointsCounter extends StatefulWidget {
+  const pointsCounter({super.key});
+
   @override
   State<pointsCounter> createState() => _pointsCounterState();
 }
@@ -31,7 +33,7 @@ class _pointsCounterState extends State<pointsCounter> {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Row(
@@ -47,7 +49,7 @@ class _pointsCounterState extends State<pointsCounter> {
                       ),
                       Text(
                         '$teamAPoints',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 150,
                         ),
                       ),
@@ -102,7 +104,7 @@ class _pointsCounterState extends State<pointsCounter> {
                   ),
                   const SizedBox(
                     height: 400,
-                    child: const VerticalDivider(
+                    child: VerticalDivider(
                       color: Colors.grey,
                       thickness: 1,
                     ),
@@ -117,7 +119,7 @@ class _pointsCounterState extends State<pointsCounter> {
                       ),
                       Text(
                         '$teamBPoints',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 150,
                         ),
                       ),
@@ -174,7 +176,7 @@ class _pointsCounterState extends State<pointsCounter> {
               // const SizedBox(
               //   height: 32,
               // ),
-              Spacer(flex: 1),
+              const Spacer(flex: 1),
 
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -192,7 +194,7 @@ class _pointsCounterState extends State<pointsCounter> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
               ),
-              Spacer(flex: 3),
+              const Spacer(flex: 3),
             ],
           ),
         ));
